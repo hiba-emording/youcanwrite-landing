@@ -25,23 +25,93 @@
             z-index: 1000;
         }
 
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            margin: 0 1em;
+        }
+
         header nav ul li a {
             color: #fff; /* White link color */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
         header nav ul li a:hover {
             color: #9575cd; /* Lavender link color on hover */
         }
 
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            height: 60vh; /* Adjusted height */
+            overflow: hidden;
+            margin-top: 60px; /* Adjust for fixed header */
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
         .cover-image {
-            height: 100vh;
-            background: url('cover-image.jpg') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff; /* White text color */
             text-align: center;
             padding: 2em;
+        }
+
+        .intro-content h1 {
+            font-size: 4em;
+            margin: 0;
+            font-family: 'Lobster', cursive;
+            animation: fadeIn 2s;
+        }
+
+        .intro-content p {
+            font-size: 1.5em;
+            margin: 1em 0;
+            animation: fadeIn 3s;
         }
 
         .btn {
@@ -67,6 +137,13 @@
             margin-top: 60px;
         }
 
+        .feature-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2em;
+        }
+
         .feature {
             background: #e8eaf6; /* Lavender feature background */
             padding: 1em;
@@ -77,6 +154,15 @@
             position: relative;
             cursor: pointer;
             transition: transform 0.3s;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .feature img {
+            width: 100%;
+            height: 200px; /* Fixed height for feature images */
+            object-fit: cover;
+            border-radius: 5px;
         }
 
         .feature:hover {
@@ -123,6 +209,24 @@
         </nav>
     </header>
 
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="ycw.png" alt="Slide 1">
+        </div>
+        <div class="slides fade">
+            <img src="Tips.png" alt="Slide 1">
+        </div>
+        <div class="slides fade">
+            <img src="Challenge.png" alt="Slide 2">
+        </div>
+        <div class="slides fade">
+            <img src="Feedback.png" alt="Slide 3">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
     <section id="intro" class="cover-image">
         <div class="intro-content">
             <h1>YouCanWrite</h1>
@@ -133,22 +237,22 @@
 
     <section id="features">
         <h2>Features</h2>
-        <div class="features-container">
+        <div class="feature-container">
             <div class="feature" onmouseover="showDescription('desc1')" onmouseout="hideDescription('desc1')">
-                <img src="challenge.jpeg" alt="Daily Writing Challenges"> 
+                <img src="challenge.png" alt="Daily Writing Challenges"> 
                 <div id="desc1" class="feature-description">Take on daily writing challenges to improve your skills.</div>
             </div>
             <div class="feature" onmouseover="showDescription('desc2')" onmouseout="hideDescription('desc2')">
-                <img src="posts.jpeg" alt="Community Interaction"> 
-                <div id="desc2" class="feature-description">Engage with a community of writers share you stories and get feedback.</div>
+                <img src="posts.png" alt="Community Interaction"> 
+                <div id="desc2" class="feature-description">Engage with a community of writers and share feedback.</div>
             </div>
             <div class="feature" onmouseover="showDescription('desc3')" onmouseout="hideDescription('desc3')">
-                <img src="tips.jpeg" alt="Writing Tips"> 
+                <img src="tips.png" alt="Writing Tips"> 
                 <div id="desc3" class="feature-description">Get daily tips to enhance your writing prowess.</div>
             </div>
             <div class="feature" onmouseover="showDescription('desc4')" onmouseout="hideDescription('desc4')">
-                <img src="profile.jpeg" alt="User Profiles">
-                <div id="desc4" class="feature-description">Create and customize your profile to connect with other writers.</div>
+                <img src="profile.png" alt="User Profiles">
+                <div id="desc4" class="feature-description">Create and customize your profile to showcase your style.</div>
             </div>
         </div>
     </section>
@@ -158,7 +262,12 @@
         <div class="about-container">
             <p>The inspiration for YouCanWrite came from my own struggles with writer's block. As someone who loves writing, I often found it challenging to generate new ideas and keep myself motivated. This personal experience led me to create a platform that could help others facing similar obstacles.</p>
             <p>YouCanWrite is a project close to my heart, developed over the course of my studies at ALX SE. It's a portfolio project that showcases the skills I've acquired, and it aims to foster a supportive community for writers. By providing daily writing challenges, tips, and a platform for feedback, I hope to inspire and assist writers in their creative journeys.</p>
-            <p>This project has been a journey of learning and growth, and I'm excited to share it with the world. You can view the source code and contribute to the project on <a href="https://github.com/hiba-emording/YouCanWrite" target="_blank">GitHub</a>.</p>
+            <p>Connect with me:</p>
+            <p>
+                <ul>
+                    <li><a href="https://github.com/hiba-emording" target="_blank">GitHub</a></li>
+                </ul>
+            </p>
         </div>
     </section>
 
@@ -167,6 +276,34 @@
     </footer>
 
     <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex >= document.getElementsByClassName("slides").length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = document.getElementsByClassName("slides").length - 1;
+            }
+            showSlides();
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            setTimeout(showSlides, 5000);
+        }
+
         function showDescription(id) {
             document.getElementById(id).style.display = 'block';
         }
