@@ -13,8 +13,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #a1a4d7; /* Light gray background */
-            color: #333; /* Dark text color */
+            background-color: #3f3c7a; /* Light gray background */
+            color: #000000; /* Dark text color */
         }
 
         header {
@@ -52,43 +52,11 @@
         }
 
         .fixed-image {
-            width: 100%;
-            height: 480px;
+            width: 1440;
+            height: 430px;
             background: url('cover-image.jpg') no-repeat center center;
             background-size: cover;
             margin-top: 60px;
-        }
-
-        .slides {
-            display: none;
-            width: 100%;
-            height: 100%;
-        }
-
-        .slides img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
         }
 
         .prev:hover, .next:hover {
@@ -99,7 +67,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #7d4683;
+            background-color: #a1a4d7;
+            color: #522a57;
             text-align: center;
             padding: 2em;
         }
@@ -113,8 +82,10 @@
 
         .intro-content p {
             font-size: 1.5em;
+            font-style: bold;
             margin: 1em 0;
             font-family: 'Julius Sans One', sans-serif;
+            color: #400060;
             animation: fadeIn 3s;
         }
 
@@ -122,8 +93,8 @@
             display: inline-block;
             padding: 1em 2em;
             font-family: 'Julius Sans One', sans-serif;
-            background: #1a237e; /* Dark blue button background */
-            color: #fff; /* White text color */
+            background: #6a62bc; 
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 1em;
@@ -138,7 +109,7 @@
         section {
             padding: 4em 2em;
             text-align: center;
-            background: #fff; /* White section background */
+            background: #a1a4d7; /* White section background */
             margin-top: 60px;
         }
 
@@ -150,7 +121,7 @@
         }
 
         .feature {
-            background: #e8eaf6; /* Lavender feature background */
+            background: #a1a4d7;
             padding: 1em;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -188,6 +159,7 @@
 
         .about-container {
             font-family: 'Raleway', sans-serif;
+            font-style: bold;
             max-width: 800px;
             margin: 0 auto;
             text-align: left;
@@ -228,7 +200,7 @@
     <section id="intro" class="cover-image">
         <div class="intro-content">
             <h1>YouCanWrite</h1>
-            <p>Your daily dose of writing inspiration and feedback</p>
+            <p>FROM SPARK TO MASTERPIECE</p>
             <a href="" class="btn">Get Started</a> 
         </div>
     </section>
