@@ -20,6 +20,7 @@ module.exports = {
         'section-bg': '#a1a4d7',
         'feature-overlay': 'rgba(0, 0, 0, 0.7)',
         'about-bg': '#f7f7f7',
+        'about-text': '#fff',
         'footer-bg': '#010028',
         'footer-text': '#fff',
       },
