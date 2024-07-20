@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouCanWrite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Julius+Sans+One&display=swap" rel="stylesheet">
+  <link href="../public/output.css" rel="stylesheet">
+</head>
+
+<body class="font-raleway bg-primary-bg text-primary-text">
+  <header class="fixed top-0 w-full z-1000 bg-header-bg text-footer-text py-4">
+    <nav>
+      <ul class="flex justify-center space-x-4">
+        <li><a href="#intro" class="hover:text-hover-text font-bold">Home</a></li>
+        <li><a href="#features" class="hover:text-hover-text font-bold">Features</a></li>
+        <li><a href="#about" class="hover:text-hover-text font-bold">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="w-full h-[430px] bg-cover bg-center mt-16" style="background-image: url('../public/images/cover-image.png');">
+  </div>
+
+  <section id="intro" class="flex justify-center items-center bg-section-bg text-[#522a57] text-center py-16">
+    <div class="intro-content">
+      <h1 class="text-6xl font-lobster fadeIn">YouCanWrite</h1>
+      <p class="text-2xl font-bold mt-4 fadeIn">FROM SPARK TO MASTERPIECE</p>
+      <a href="https://youcanwrite.onrender.com" class="inline-block bg-button-bg text-white py-3 px-6 rounded mt-4 transition duration-300 hover:bg-button-hover-bg fadeIn">Get Started</a>
+    </div>
+  </section>
+
+  <section id="features" class="py-16 text-center bg-section-bg mt-16">
+    <h2 class="text-3xl mb-8">Features</h2>
+    <div class="feature-container flex flex-wrap justify-center gap-8">
+      <div class="feature relative bg-section-bg p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 max-w-[300px] cursor-pointer"
+        onmouseover="showDescription('desc1')" onmouseout="hideDescription('desc1')">
+        <img src="../public/images/challenge.png" alt="Daily Writing Challenges" class="w-full h-[230px] object-cover rounded">
+        <div id="desc1" class="feature-description absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-feature-overlay text-white p-2 rounded hidden">Take on daily writing challenges to improve your skills.</div>
+      </div>
+      <div class="feature relative bg-section-bg p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 max-w-[300px] cursor-pointer"
+        onmouseover="showDescription('desc2')" onmouseout="hideDescription('desc2')">
+        <img src="../public/images/posts.png" alt="Community Interaction" class="w-full h-[230px] object-cover rounded">
+        <div id="desc2" class="feature-description absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-feature-overlay text-white p-2 rounded hidden">Engage with a community of writers and share feedback.</div>
+      </div>
+      <div class="feature relative bg-section-bg p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 max-w-[300px] cursor-pointer"
+        onmouseover="showDescription('desc3')" onmouseout="hideDescription('desc3')">
+        <img src="../public/images/tips.png" alt="Writing Tips" class="w-full h-[230px] object-cover rounded">
+        <div id="desc3" class="feature-description absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-feature-overlay text-white p-2 rounded hidden">Get daily tips to enhance your writing prowess.</div>
+      </div>
+      <div class="feature relative bg-section-bg p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 max-w-[300px] cursor-pointer"
+        onmouseover="showDescription('desc4')" onmouseout="hideDescription('desc4')">
+        <img src="../public/images/profile.png" alt="User Profiles" class="w-full h-[230px] object-cover rounded">
+        <div id="desc4" class="feature-description absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-feature-overlay text-white p-2 rounded hidden">Create and customize your profile to showcase your style.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-16 text-center">
+    <h2 class="text-3xl mb-8">About YouCanWrite</h2>
+    <div class="about-container max-w-[800px] mx-auto text-left">
+      <p>YouCanWrite is a dynamic platform designed to inspire and support writers at every stage of their creative journey. Whether you're an aspiring novelist, a seasoned author, or someone who enjoys writing as a hobby, YouCanWrite offers a range of features to help you improve your writing skills, connect with other writers, and stay motivated through daily challenges and tips.</p>
+      <p class="mt-4">At its core, YouCanWrite aims to address common challenges faced by writers, such as writer's block and lack of feedback. By providing a supportive community and a variety of writing prompts, YouCanWrite ensures that writers always have a source of inspiration and a space to share their work.</p>
+      <p class="mt-4">The inspiration for YouCanWrite came from my own struggles with writer's block. As someone who loves writing, I often found it challenging to generate new ideas and keep myself motivated. This personal experience led me to create a platform that could help others facing similar obstacles.</p>
+      <p class="mt-4">YouCanWrite is a project close to my heart, developed over the course of my studies at ALX SE. It's a portfolio project that showcases the skills I've acquired, and it aims to foster a supportive community for writers. By providing daily writing challenges, tips, and a platform for feedback, I hope to inspire and assist writers in their creative journeys.</p>
+      <p class="mt-4">Connect with me:</p>
+      <ul class="mt-2">
+        <li><a href="https://github.com/hiba-emording" target="_blank" class="text-blue-500">GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="bg-footer-bg text-footer-text text-center py-4">
+    <p class="m-0">&copy; 2024 YouCanWrite. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showDescription(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function hideDescription(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
